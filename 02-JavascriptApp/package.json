@@ -1,0 +1,29 @@
+{
+  "name": "testado2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack"
+  },
+  "keyboard": [
+    "webpack"
+  ],
+  "author": "moviedo",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@types/node": "^16.4.1",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.6",
+    "node-cron": "^3.0.0"
+  }
+}

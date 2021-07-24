@@ -31,4 +31,8 @@ run app
     npm start
     npm run prod
 
+# webpack pluging
+https://www.npmjs.com/package/create-file-webpack
+
+npm i create-file-webpack --save-dev
 

@@ -1,9 +1,17 @@
-//ver https://www.youtube.com/watch?v=DqjuUA_SDQg&t=22s
-// const {merge} = 
+const CreateFileWebpack = require('create-file-webpack');
 const path = require("path");
-const nodeExternals = require("webpack-node-externals");
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
-//
+
+
+const options = {
+  // path to folder in which the file will be created
+  path: './dist',
+  // file name
+  fileName: 'service.bat',
+  // content of the file
+  content: '@echo on   npm run prod  pause'
+};
+
+
 module.exports = {
   target : 'node',
   mode: "production",
@@ -22,11 +30,7 @@ module.exports = {
 
   module: {
     rules: [
-      // {
-      //   test: /\.js$/i,
-      //   use: "babel-loader",
-      //   exclude: /node_modules/,
-      // },
+     
       {
         test: /\.(ts|tsx)$/i, // que archivos vas a soportar . Expresion regular
         exclude:  /node_modules/,
@@ -41,6 +45,9 @@ module.exports = {
       "path": false
     },
     extensions: ['.tsx', '.ts','.js', '.json', '.wasm']
-  }
+  },
+  plugins: [
+    new CreateFileWebpack( options)
+  ]
  
 };

@@ -62,18 +62,20 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
 
 ## For 01-TypesCriptApp 
 
-# Typesript 
+### Typesript 
 
     npm install typescript --save-dev
 
-# Type definitions for NodeJS
+### Type definitions for NodeJS
 
     npm i --save-dev @types/node
 
-# dayjs 
+***Note *** this project will have two intentional dependencies to show the ability to include them in the packaging without having the need to copy and paste the node_modules folder in the hosting
+### dayjs 
+
     npm i dayjs
 
-# node-cron scheduler 
+### node-cron scheduler 
     npm install --save node-cron
     
  **types/node** I we use typescript

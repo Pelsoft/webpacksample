@@ -32,7 +32,7 @@ module.exports = {
   },
   output: {
     //filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist/service"),
     filename: '[name].[contenthash].bundle.js',        // generara un hash diferente con cada compilado para que no quede en la cache de los navegadores
     clean: true,
    
@@ -59,7 +59,7 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: "filesToRelease/serviceStart.bat", to: "serviceStart.bat" },
+        { from: "filesToRelease/serviceStart.bat", to: "../serviceStart.bat" },
         // { from: "filesToRelease/serviceStart.bat", to: "serviceStart.bat" },
       ],
     }),

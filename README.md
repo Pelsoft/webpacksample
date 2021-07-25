@@ -59,6 +59,22 @@ Install via NPM
 ```
 If you specify a --config file or provide a local `nodemon.json` any package.json config is ignored.
 
+### Install console logs colors
+    npm install colors
+
+# A practical purposes
+
+- this project will have two intentional dependencies to show the ability to include them in the packaging without having the need to copy and paste the node_modules folder in the hosting
+
+### dayjs 
+
+    npm i dayjs
+
+### node-cron scheduler 
+    npm install --save node-cron
+    
+ **types/node** I we use typescript.   Do you need to install type definitions for node Try `npm i --save-dev @types/node`
+
 
 ## For 01-TypesCriptApp 
 
@@ -70,19 +86,21 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
 
     npm i --save-dev @types/node
 
-***Note *** this project will have two intentional dependencies to show the ability to include them in the packaging without having the need to copy and paste the node_modules folder in the hosting
-### dayjs 
-
-    npm i dayjs
-
-### node-cron scheduler 
-    npm install --save node-cron
-    
- **types/node** I we use typescript
-'require'.   Do you need to install type definitions for node? Try `npm i --save-dev @types/node`
-
-
-# deployd 
+### Create tsconfig.json file to configure Typesript
+```json
+    {
+        "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "ES6",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "allowJs": true,
+        }
+    }
+```
+# Deployd 
 
 1 run --> npm run build script
 2 webpack will generate dist folder with the transpiled main.js
@@ -94,16 +112,18 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
 
 ## What do we need in build root folder
  
+In ./filesToRelease foder I left you some files tht you can use when you make the deployd. imply copy and paste them in the root destination directory
+The files are:
 
 # Option 1 serviceStart.bat `Optional you can create bat &&  package.json files`
-    
-serviceStart.bat
-    @echo on
-    npm run prod2
-    pause
-    
-package.json
-   enshure that you've create package.json file with the correct script section:
+ - serviceStart.bat
+    ```bat  
+        @echo on
+        npm run prod2
+        pause
+    ```
+- package.json
+   Enshure that you've create package.json file with the correct script section:
 ```json
         {
         "name": "MyService",
@@ -125,9 +145,12 @@ package.json
 ```
 
 # Option2 serviceStartnode.bat: this method calls tsc and nodemom directly
+
+ ```bat  
     @echo on
     tsc && nodemon  --tls-min-v1.0   dist/main.js
     pause
+```
 
 ***ERROR***: 
 
@@ -141,18 +164,5 @@ Al agregar cron-node y hacer npm runbuild
     The target: 'node' option tells webpack not to touch any built-in modules like fs or path.
 
 
-<p align="center" style="font-weight:22px">
-  nodemon
-</p>
-
-Is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-Installation  will be installed globally to your system path.
-
-npm install -g nodemon
-
-Usage
-    nodemon [your node app]
-
-    nodemon ./server.js localhost 8080
 
     

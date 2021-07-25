@@ -7,8 +7,6 @@
         "sourceMap": true,
         "moduleResolution": "node",
         "allowJs": true,
-     
-        
     }
     // "include": [
     //     "src/**/*.ts"

@@ -12,9 +12,6 @@ calculate =()=>{
 }
 
 
-
-
-
 cron.schedule('* * * * *', () => {
     console.log('running a task every minute');
     calculate();

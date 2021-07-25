@@ -3,7 +3,7 @@ How to configure our packages to be delivered correctly using webpack
 
 ## Table of Contents
 
-- [Intro an agenda](#Intro)
+- [Intro ](#Intro)
 - [Getting started](#Getting-started)
 - [For 01-TypesCriptApp](#For-01-TypesCriptApp)
 - [Deployd](#Deployd )
@@ -70,7 +70,7 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
 ### Install console logs colors
     npm install colors
 
-# A practical purposes
+# For a practical purposes
 
 - this project will have two intentional dependencies to show the ability to include them in the packaging without having the need to copy and paste the node_modules folder in the hosting
 
@@ -128,7 +128,7 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
 In ./filesToRelease foder I left you some files tht you can use when you make the deployd. imply copy and paste them in the root destination directory
 The files are:
 
-# Option 1 serviceStart.bat `Optional you can create bat &&  package.json files`
+### Option 1 serviceStart.bat `Optional you can create bat &&  package.json files`
  - serviceStart.bat
     ```bat  
         @echo on
@@ -157,7 +157,7 @@ The files are:
         } 
 ```
 
-# Option2 serviceStartnode.bat: this method calls tsc and nodemom directly
+### Option2 serviceStartnode.bat: this method calls tsc and nodemom directly
 
  ```bat  
     @echo on

@@ -115,11 +115,11 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
 ## Deployd
 
 - Create the release (runscript) --> npm run build 
-- webpack will generate dist folder with the transpiled main.js bundle.js or the name you spesify in webpack output
+- webpack will generate dist folder with the transpiled bundle.js bundle.js or the name you spesify in webpack output
 - copy dist folder in production with package.json file in root dir. Not inside dist folder
 - Posisionated in package.json file path directory, you can run either 
 
-   node dist/main.js
+   node dist/bundle.js
 
 or simply
         
@@ -148,8 +148,8 @@ The files are:
         "description": "Servicio e automatizacion de importacion facturas y socios mensual",
         "main": "index.js",
         "scripts": {
-            "start": "tsc && nodemon  --tls-min-v1.0   dist/main.js",
-            "prod": "tsc && node --tls-min-v1.0  dist/main.js",
+            "start": "tsc && nodemon  --tls-min-v1.0   dist/bundle.js",
+            "prod": "tsc && node --tls-min-v1.0  dist/bundle.js",
             "prod2": "nodemon dist/main.js",
             "test": "echo \"Error: no test specified\" && exit 1",
             "build": "webpack"
@@ -165,7 +165,7 @@ The files are:
 
  ```bat  
     @echo on
-    tsc && nodemon  --tls-min-v1.0   dist/main.js
+    tsc && nodemon    dist/bundle.js
     pause
 ```
 

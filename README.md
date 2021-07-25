@@ -23,16 +23,27 @@ For both projects we must have the following development dependencies installed
 ### Install webpack
     npm i -D webpack webpack-cli
 
-### InstallBabel 
+### Install Babel 
 
 - [Babel-page](https://babeljs.io/): transpilador de codigo WA2015 a js viejo
 Install via NPM
 
-    npm i -D babel-loader @babel/core  @babel/preset-env 
-    create file .babelrc
+    - npm i -D babel-loader @babel/core  @babel/preset-env 
+    - create file .babelrc in root directory
+```json
+    {
+    "presets":[
+        ["@babel/preset-env",{
 
-### nodemon
-    Is a tool that helps develop node.js based applications by `automatically restarting` the node application when file changes in the 
+            "corejs": 3.10,
+            "useBuiltIns":"usage"
+        }]
+        ,"@babel/preset-typescript" ]
+}
+```
+
+### Install nodemom 
+- [nodemon-page](https://www.npmjs.com/package/nodemon): Is a tool that helps develop node.js based applications by `automatically restarting` the node application when file changes in the 
     To use nodemom you need to change yours scripts in package.json as show below
 
  
@@ -49,7 +60,7 @@ Install via NPM
 If you specify a --config file or provide a local `nodemon.json` any package.json config is ignored.
 
 
-# For 01-TypesCriptApp 
+## For 01-TypesCriptApp 
 
 # Typesript 
 

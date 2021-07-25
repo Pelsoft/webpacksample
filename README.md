@@ -1,6 +1,14 @@
 # Using webpack in backend 
 How to configure our packages to be delivered correctly using webpack
 
+## Table of Contents
+
+- [Intro an agenda](#Intro)
+- [Getting started](#Getting-started)
+- [For 01-TypesCriptApp](#For-01-TypesCriptApp)
+- [Deployd](#Deployd )
+- [What do we need in build root folder](#What-do-we-need-in-build-root-folder)
+
 ## Intro
 
 In this example I will try to show the step to create a professional form release
@@ -14,7 +22,7 @@ For practical purpose I am going to create 2 projects
      One for Typescript  (allocated in 01-TypesCriptApp) and  another one for pure  Javascript (in 02-JavascriptApp)
 
 
-#Getting start 
+# Getting started 
 
 ### First of all 
 
@@ -100,15 +108,20 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
         }
     }
 ```
-# Deployd 
 
-1 run --> npm run build script
-2 webpack will generate dist folder with the transpiled main.js
-3 copy dist folder in production with package.json file in root dir. Not inside dist folder
-4 Posisionated in package.json file path directory, you can run either 
+
+## Deployd
+
+- Create the release (runscript) --> npm run build 
+- webpack will generate dist folder with the transpiled main.js bundle.js or the name you spesify in webpack output
+- copy dist folder in production with package.json file in root dir. Not inside dist folder
+- Posisionated in package.json file path directory, you can run either 
+
     node dist/main.js
         or simply
     npm start
+
+
 
 ## What do we need in build root folder
  

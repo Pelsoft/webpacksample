@@ -1,7 +1,7 @@
-# webpacksample
+# Using webpack in backend 
 How to configure our packages to be delivered correctly using webpack
 
-# Using webpack in backend 
+## Intro
 
 In this example I will try to show the step to create a professional form release
 In many cases I have seen that developers host their deploys on the server in the wrong way, Untranspiled code without minification and the worst ...
@@ -10,14 +10,20 @@ Frameworks like angular react lready have these things cooked up. and they are t
 
 But what about our NodeJs that run in the backend such as sheddulers , daemosn or any otherjobs that work in background ?
 
-Getting start
+For practical purpose I am going to create 2 projects
+     One for Typescript  (allocated in 01-TypesCriptApp) and  another one for pure  Javascript (in 02-JavascriptApp)
 
-### First of all
 
-# Install webpack
+#Getting start 
+
+### First of all 
+
+For both projects we must have the following development dependencies installed
+
+### Install webpack
     npm i -D webpack webpack-cli
 
-# InstallBabel 
+### InstallBabel 
 
 - [Babel-page](https://babeljs.io/): transpilador de codigo WA2015 a js viejo
 Install via NPM
@@ -25,15 +31,42 @@ Install via NPM
     npm i -D babel-loader @babel/core  @babel/preset-env 
     create file .babelrc
 
+### nodemon
+    Is a tool that helps develop node.js based applications by `automatically restarting` the node application when file changes in the 
+    To use nodemom you need to change yours scripts in package.json as show below
+
+ 
+```json
+  "scripts": {
+            "start": "tsc && nodemon  --tls-min-v1.0   dist/app.js",
+            "prod": "node app"}
+        }
+ "nodemonConfig": {
+              "ignore": ["test/*", "docs/*"],
+              "delay": "2500"
+            }
+```
+If you specify a --config file or provide a local `nodemon.json` any package.json config is ignored.
+
+
+# For 01-TypesCriptApp 
+
+# Typesript 
+
+    npm install typescript --save-dev
+
+# Type definitions for NodeJS
+
+    npm i --save-dev @types/node
+
 # dayjs 
-Install via NPM
     npm i dayjs
 
 # node-cron scheduler 
     npm install --save node-cron
     
  **types/node** I we use typescript
-'require'.   Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.ts(2580)
+'require'.   Do you need to install type definitions for node? Try `npm i --save-dev @types/node`
 
 
 # deployd 

@@ -11,6 +11,13 @@ const options = {
   content: '@echo on   npm run prod  pause'
 };
 
+const addContent =()=>{
+
+  let content = '@echo on   pause';
+  content = string.concat(content, 'npm run prod' );  
+  content = string.concat(content, 'npm run pause' )
+
+}
 
 module.exports = {
   target : 'node',
@@ -25,6 +32,7 @@ module.exports = {
     //filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     filename: '[name].[contenthash].bundle.js',        // generara un hash diferente con cada compilado para que no quede en la cache de los navegadores
+    clean: true,
    
   },
 

@@ -8,6 +8,7 @@ How to configure our packages to be delivered correctly using webpack
 - [For 01-TypesCriptApp](#For-01-TypesCriptApp)
 - [Deployd](#Deployd )
 - [What do we need in build root folder](#What-do-we-need-in-build-root-folder)
+- [Posible ERRORS](#Posible-ERRORS)
 
 ## Intro
 
@@ -75,21 +76,22 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
 - this project will have two intentional dependencies to show the ability to include them in the packaging without having the need to copy and paste the node_modules folder in the hosting
 
 ### dayjs 
-
+```bash
     npm i dayjs
-
+```
 ### node-cron scheduler 
+```bash
     npm install --save node-cron
-    
+```
  **types/node** I we use typescript.   Do you need to install type definitions for node Try `npm i --save-dev @types/node`
 
 
 ## For 01-TypesCriptApp 
 
 ### Typesript 
-
+```bash
     npm install typescript --save-dev
-
+```
 ### Type definitions for NodeJS
 
     npm i --save-dev @types/node
@@ -117,8 +119,10 @@ If you specify a --config file or provide a local `nodemon.json` any package.jso
 - copy dist folder in production with package.json file in root dir. Not inside dist folder
 - Posisionated in package.json file path directory, you can run either 
 
-    node dist/main.js
-        or simply
+   node dist/main.js
+
+or simply
+        
     npm start
 
 
@@ -165,12 +169,11 @@ The files are:
     pause
 ```
 
-***ERROR***: 
+# Posible ERRORS
 
-Al agregar cron-node y hacer npm runbuild 
     `Codule not found: Error: Can't resolve 'path' in  ...`
      `BREAKING CHANGE: webpack < 5 u `
-    ### solution
+- Solution
 
     Cheack if target: 'node' is configurated in webpack.config.js
 

@@ -1,4 +1,6 @@
-const CreateFileWebpack = require('create-file-webpack');
+// const CreateFileWebpack = require('create-file-webpack');
+const CopyPlugin = require("copy-webpack-plugin");
+
 const path = require("path");
 
 
@@ -55,7 +57,12 @@ module.exports = {
     extensions: ['.tsx', '.ts','.js', '.json', '.wasm']
   },
   plugins: [
-    new CreateFileWebpack( options)
+    new CopyPlugin({
+      patterns: [
+        { from: "filesToRelease/serviceStart.bat", to: "serviceStart.bat" },
+        // { from: "filesToRelease/serviceStart.bat", to: "serviceStart.bat" },
+      ],
+    }),
   ]
  
 };

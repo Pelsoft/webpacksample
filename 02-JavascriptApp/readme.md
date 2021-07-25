@@ -47,7 +47,7 @@ The files are:
 
  ```bat  
     @echo on
-     nodemon  dist/main.js
+     nodemon  service/bundle.js
     pause
 ```
 

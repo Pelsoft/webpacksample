@@ -1,3 +1,4 @@
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 module.exports = {
   target : 'node',
@@ -6,8 +7,9 @@ module.exports = {
     app: path.resolve(__dirname, "src", "index.js"),
   },
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist/service"),
+     clean: true,
   },
 
   module: {
@@ -30,7 +32,14 @@ module.exports = {
       "path": false
     }
   }
-    
+    ,  plugins: [
+      new CopyPlugin({
+        patterns: [
+          { from: "filesToRelease/serviceStart.bat", to: "../serviceStart.bat" },
+          { from: "filesToRelease/package.json", to: "../package.json" },
+        ],
+      }),
+    ]
   
  
 };

@@ -4,15 +4,12 @@
   "description": "Servicio e automatizacion de importacion facturas y socios mensual",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && nodemon  --tls-min-v1.0   dist/bundle.js",
-    "prod": "tsc && node --tls-min-v1.0  dist/bundle.js",
-	"prod2": "nodemon dist/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "start": "tsc && nodemon  --tls-min-v1.0   service/bundle.js",
+    "prod": "tsc && node --tls-min-v1.0  service/bundle.js",
+    "prod2": "nodemon dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Marcelo F. Oviedo",
   "license": "ISC",
-  
   "browserslist": "> 0.25%, not dead, not ie 11"
-
 }

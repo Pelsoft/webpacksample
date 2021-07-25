@@ -1,4 +1,4 @@
 
 @echo on
-npm run prod2
+npm run prod
 pause

@@ -1,5 +1,5 @@
 
 @echo on
 
-tsc && nodemon   dist/bundle.js
+tsc && nodemon   service/bundle.js
 pause

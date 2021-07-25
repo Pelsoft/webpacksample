@@ -4,14 +4,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 
-const options = {
-  // path to folder in which the file will be created
-  path: './dist',
-  // file name
-  fileName: 'service.bat',
-  // content of the file
-  content: '@echo on   npm run prod  pause'
-};
+
 
 const addContent =()=>{
 
@@ -31,9 +24,9 @@ module.exports = {
     
   },
   output: {
-    //filename: "bundle.js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist/service"),
-    filename: '[name].[contenthash].bundle.js',        // generara un hash diferente con cada compilado para que no quede en la cache de los navegadores
+    //filename: '[name].[contenthash].bundle.js',        // generara un hash diferente con cada compilado para que no quede en la cache de los navegadores
     clean: true,
    
   },
@@ -60,7 +53,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "filesToRelease/serviceStart.bat", to: "../serviceStart.bat" },
-        // { from: "filesToRelease/serviceStart.bat", to: "serviceStart.bat" },
+         { from: "filesToRelease/package.json", to: "../package.json" },
+         
       ],
     }),
   ]

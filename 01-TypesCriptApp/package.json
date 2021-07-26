@@ -4,9 +4,8 @@
   "description": "Servicio e automatizacion de importacion facturas y socios mensual",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && nodemon  --tls-min-v1.0   dist/index.js",
-    "prod": "tsc && node --tls-min-v1.0  dist/index.js   ",
-    "prod2": "nodemon dist/main.js",
+    "start": "tsc && nodemon   --tls-min-v1.0 dist/index.js",
+    "prod": "tsc && node --tls-min-v1.0  dist/service/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },

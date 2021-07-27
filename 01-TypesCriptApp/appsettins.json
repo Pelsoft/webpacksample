@@ -2,7 +2,8 @@
     "setting": {
         "apiUrlBase" : "http://localhost:58000/",
         "sourceFolder": "e:\\sourceFiles\\",
-        "destFolder": "e:\\desFiles\\"
+        "destFolder": "e:\\desFiles\\",
+		"scheduling":"* * * * *"
   }
   
 }

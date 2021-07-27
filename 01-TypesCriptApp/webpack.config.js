@@ -54,6 +54,8 @@ module.exports = {
       patterns: [
         { from: "filesToRelease/serviceStart.bat", to: "../serviceStart.bat" },
          { from: "filesToRelease/package.json", to: "../package.json" },
+         { from: "appsettins.json", to: "../appsettins.prod.json" },
+       
          
       ],
     }),

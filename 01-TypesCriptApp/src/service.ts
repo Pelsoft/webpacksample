@@ -18,7 +18,6 @@ export class ImportadorTomaEstado {
     // */50 16   20-30 * *  At every 50th minute past hour 16 on every day-of-month from 20 through 30 
     // */2 16-17* * *       At every 2nd minute past every hour from 16 through 17.                    
      // cron.schedule("*/50 16 20-30 * *", async () => {
-     //cron.schedule("* * * * *", async () => {
       cron.schedule(AppSettings.Instance.setting.scheduling, async () => {
       await this.DoWork();
     });

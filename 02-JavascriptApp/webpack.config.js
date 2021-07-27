@@ -36,7 +36,8 @@ module.exports = {
       new CopyPlugin({
         patterns: [
           { from: "filesToRelease/serviceStart.bat", to: "../serviceStart.bat" },
-          { from: "filesToRelease/package.json", to: "../package.json" },
+          { from: "filesToRelease/package.json", to: "../package.json" }
+    
         ],
       }),
     ]

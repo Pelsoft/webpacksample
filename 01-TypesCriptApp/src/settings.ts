@@ -36,4 +36,5 @@ export class Setting {
   public apiUrlBase: string;
   public sourceFolder: string;
   public destFolder: string;
+  public scheduling :string;
 }

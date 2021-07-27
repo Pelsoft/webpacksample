@@ -6,16 +6,16 @@ const importer = new ImportadorTomaEstado();
 
 
 
-init().then(()=>{
-    console.log('Pelsoft service version 1.2')
-    importer.Start();
-});
-
-
 // init().then(()=>{
-//     importer.StartTest().then((res)=>{
-//      });
+//     console.log('Pelsoft service version 1.2')
+//     importer.Start();
 // });
+
+
+init().then(()=>{
+    importer.Start().then((res)=>{
+     });
+});
 
  
 async function init() {
@@ -25,7 +25,7 @@ async function init() {
         Helper.Log('Initializing ....');
         console.log(setting.setting );
       } catch (error) {
-        Helper.LogError(`Got an error trying to write to a file: ${error.message}`);
-        console.error(`Got an error trying to write to a file: ${error.message}`);
+        Helper.LogError(`Got an error trying to load settings: ${error.message}`);
+        
       }
     }

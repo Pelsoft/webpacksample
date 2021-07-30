@@ -31,6 +31,13 @@ For both projects we must have the following development dependencies installed
 
 ### Install webpack
     npm i -D webpack webpack-cli
+### Install webpack pluging
+    Copies individual files or entire directories, which already exist, to the build directory.
+    In this case we'll copy extra bat and settings files that will serve as support to starat or run de app on the server
+    `you'll need to install copy-webpack-plugin`
+
+   - npm install copy-webpack-plugin --save-dev
+
 
 ### Install Babel 
 

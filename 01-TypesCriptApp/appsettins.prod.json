@@ -1,8 +1,8 @@
 {
   "setting": {
       "apiUrlBase" : "http://localhost:58000/",
-      "sourceFolder": "e:\\sourceFiles\\",
-      "destFolder": "e:\\desFiles\\",
+      "sourceFolder": "e:\\entregas\\celam\\cron-jobs-services\\TomaestadosOrigen",
+      "destFolder": "e:\\entregas\\celam\\cron-jobs-services\\TomaestadosDestino",
       "scheduling":"* * * * *"
 }
 

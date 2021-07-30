@@ -11,9 +11,9 @@ export class AppSettings {
   
     public  static async Create(): Promise<AppSettings>{
       
-      dotenv.config({ path: __dirname+'/.env' });
+      // dotenv.config({ path: __dirname+'/.env' });
 
-      Helper.Log(__dirname)
+      // Helper.Log(__dirname)
       //let setting:   AppSettings;
      if(AppSettings.Instance)
       return AppSettings.Instance;

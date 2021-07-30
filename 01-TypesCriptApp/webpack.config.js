@@ -5,15 +5,6 @@ const path = require("path");
 
 
 
-
-const addContent =()=>{
-
-  let content = '@echo on   pause';
-  content = string.concat(content, 'npm run prod' );  
-  content = string.concat(content, 'npm run pause' )
-
-}
-
 module.exports = {
   target : 'node',
   mode: "production",
@@ -38,8 +29,7 @@ module.exports = {
         test: /\.(ts|tsx)$/i, // que archivos vas a soportar . Expresion regular
         exclude:  /node_modules/,
         use:"ts-loader"
-        
-       
+      
       },
     ],
   },
@@ -54,7 +44,7 @@ module.exports = {
       patterns: [
         { from: "filesToRelease/serviceStart.bat", to: "../serviceStart.bat" },
          { from: "filesToRelease/package.json", to: "../package.json" },
-         { from: "appsettins.json", to: "../appsettins.prod.json" },
+         { from: "appsettins.prod.json", to: "../appsettins.json" },
        
          
       ],

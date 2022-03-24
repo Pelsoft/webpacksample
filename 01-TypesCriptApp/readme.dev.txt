@@ -36,8 +36,12 @@
  npm i -D webpack webpack-cli webpack webpack-node-externals babel-loader @babel/core @babel/preset-env
  npm i webpack-node-externals
 
-instalamos dependencia de produccion para que agregue los pollyfills : dado que existen objetos globales como pormise maps etc y metodos estaticos array.map que no estan traducidos par alos navegadores
+Instalamos dependencia de producción para que agregue los pollyfills : dado que existen objetos globales como promise, maps, etc y métodos estáticos array.map que 
+no estan traducidos para los navegadores
+ 
+```
  npm i core-js --> esto metera codigo en nuestro package final
+```
 # dependences installed
     
     1 dayjs 

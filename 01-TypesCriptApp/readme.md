@@ -5,8 +5,6 @@
   2 Mueve los archivos -->`setting.destFolder`
   3 realiza una llamada API `setting.apiUrlBase/api/TomaEstados/import`
   
-  
-  
 
 # install
  Crear un inicio automatico
@@ -24,15 +22,19 @@ https://desarrolloweb.com/articulos/ejecutar-aplicacion-nodejs-pm2.html
 
 
 # deploy and run
-
+ 
+```
 npm install --production
 
 run app
     npm start
     npm run prod
-
+ 
+```
 # webpack pluging
 https://www.npmjs.com/package/create-file-webpack
-
+ 
+```
 npm i create-file-webpack --save-dev
-
+ 
+```

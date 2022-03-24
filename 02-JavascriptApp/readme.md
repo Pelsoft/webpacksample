@@ -13,7 +13,7 @@
 
 ## What do we need in build root folder?
  
-In ./filesToRelease foder I left you some files tht you can use when you make the deployd. imply copy and paste them in the root destination directory
+In ./filesToRelease foder I left you some files that you can use when you make the deployd. Simply copy and paste them in the root destination directory
 The files are:
 
 ### Option 1 serviceStart.bat `Optional you can create bat &&  package.json files`

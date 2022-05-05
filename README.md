@@ -41,7 +41,7 @@ For both projects we must have the following development dependencies installed
 
 ### Install Babel 
 
-- [Babel-page](https://babeljs.io/): tranpilate code WA2015 to old js 
+- [Babel-page](https://babeljs.io/): tranpilate code ECMAScript X to old js 
 Install via npm
 
     - npm i -D babel-loader @babel/core  @babel/preset-env 

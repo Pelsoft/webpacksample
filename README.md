@@ -41,8 +41,8 @@ For both projects we must have the following development dependencies installed
 
 ### Install Babel 
 
-- [Babel-page](https://babeljs.io/): transpilador de codigo WA2015 a js viejo
-Install via NPM
+- [Babel-page](https://babeljs.io/): tranpilate code WA2015 to old js 
+Install via npm
 
     - npm i -D babel-loader @babel/core  @babel/preset-env 
     - create file .babelrc in root directory
@@ -182,7 +182,7 @@ The files are:
      `BREAKING CHANGE: webpack < 5 u `
 - Solution
 
-    Cheack if target: 'node' is configurated in webpack.config.js
+    Check if target: 'node' is configurated in webpack.config.js
 
     The target: 'node' option tells webpack not to touch any built-in modules like fs or path.
 
